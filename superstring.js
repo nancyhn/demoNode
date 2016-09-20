@@ -1,6 +1,7 @@
 /**
  * Created by nguyenkhoa on 9/20/16.
  */
+"use strict"
 String.prototype.reverse = function () {
     var stringDao = "";
     for (var i = this.length-1; i >=0; i--) {
@@ -35,6 +36,30 @@ module.exports.camel = function (chuoinhap) {
     }
     return result;
 }
+module.exports.longestChar = function (chuoinhap) {
+    var mangtu = chuoinhap.split(" ");
+    var tudainhat = "";
+    for (var i = 0; i < mangtu.length - 1; i++) {
+        if (mangtu[i].length >= mangtu[i +1].length) {
+            tudainhat = mangtu[i];
+        }
+        else  {
+            tudainhat = mangtu[i+1];
+        }
+    }
+    return tudainhat;
+}
+
+//exports class
+module.exports.Person = class {
+    constructor(name) {
+        this.name = name;
+    }
+    sayName() {
+        console.log(this.name);
+    }
+}
+
 // module.exports = {
 //     something: 123,
 //     invertStr: function(inputString) {
