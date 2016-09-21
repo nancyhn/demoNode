@@ -12,3 +12,4 @@ console.log(String.longestChar("dau la tu dai nhau trong string nay nhi aaa dfj 
 const Person = require('./superstring').Person;
 var  person = new Person("khoa");
 console.log(person.sayName());
+
